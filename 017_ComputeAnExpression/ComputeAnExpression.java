@@ -12,10 +12,22 @@ public class ComputeAnExpression {
         //calc old way
         System.out.println((num1 * num2 - num3 * num4) / (num5 - num6));
 
-        //calc new way
+        //call returning calculator
         ReturningCalculator calc = new ReturningCalculator();
+        //calculations, first part of equasion
+        double newNum1 = calc.doubleMultiplier(num1, num2);
+        double newNum2 = calc.doubleMultiplier(num3, num4);
+        double newNum3 = calc.doubleSubtractor(newNum1, newNum2);
+        //second part of equasion
+        double newNum4 = calc.doubleSubtractor(num5, num6);
+        //final divide
+        double finalNum = calc.divider(newNum3, newNum4);
 
-        double num7 = calc.doubleMultiplier(num1, num2);
+        //print statement
+        System.out.println(finalNum);
+
+        //the two ways give same output
+
 
     
 
