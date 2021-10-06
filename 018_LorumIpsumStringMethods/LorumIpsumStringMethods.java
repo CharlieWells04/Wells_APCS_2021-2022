@@ -14,8 +14,8 @@ public class LorumIpsumStringMethods {
         String uppercaseIpsum = trimmedIpsum.toUpperCase();
         String lowerCaseIpsum = trimmedIpsum.toLowerCase();
         //comparing ipsums
-        int comparedIpsums = trimmedIpsum.compareTo(ogIpsum);
-        int comparedfornoreasonIpsums = trimmedIpsum.compareTo(trimmedIpsum);
+        boolean comparedIpsums = trimmedIpsum.equals(ogIpsum);
+        boolean comparedfornoreasonIpsums = trimmedIpsum.equals(trimmedIpsum);
         //first instance of q
         int qFirstAppearance = trimmedIpsum.indexOf("q");
         // replace o with x
@@ -32,8 +32,18 @@ public class LorumIpsumStringMethods {
         System.out.println("In upper case, the blob is, " + uppercaseIpsum);
         System.out.println("");
         System.out.println("In lower case, the blob is, " + lowerCaseIpsum);
+        System.out.println("");
         //compare blobs
-        
+        System.out.println("It is " + comparedIpsums + " that the original ipsum and the trimmed ipsum are the same");
+        System.out.println("It is " + comparedfornoreasonIpsums + " that the original ipsum and the trimmed ipsum are the same");
+        System.out.println();
+
+        // indexing
+        System.out.println("Q first appears at character " + qFirstAppearance);
+        System.out.println("");
+        System.out.println("When when replacing o woth x, the ipsum look like this : " + replacedIpsum);
+        System.out.println("");
+        System.out.println("When asking if the ipsum contains the letter z, the answer is " + doesIpsumContainZ);
 
 
 
