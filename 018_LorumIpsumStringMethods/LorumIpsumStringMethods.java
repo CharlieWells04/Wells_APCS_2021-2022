@@ -44,19 +44,6 @@ public class LorumIpsumStringMethods {
         System.out.println("When when replacing o woth x, the ipsum look like this : " + replacedIpsum);
         System.out.println("");
         System.out.println("When asking if the ipsum contains the letter z, the answer is " + doesIpsumContainZ);
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
     
 }
