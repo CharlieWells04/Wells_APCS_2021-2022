@@ -10,8 +10,8 @@ public class MaximumIntegers {
         System.out.println(min);
 
         //overflow values
-        int maxOverFlow = max + (max + 1000002);
-        int minOverFlow = min + (min + 745);
+        int maxOverFlow = max + (max + 1000002); // to make positive have to add max again
+        int minOverFlow = min + (min + 745); // to make min have to use min again
         
         //print statements
         System.out.println(maxOverFlow);
