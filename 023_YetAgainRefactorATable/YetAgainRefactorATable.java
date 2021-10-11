@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class YetAgainRefactorATable {
     public static void main(String[] args)
     {
@@ -25,8 +27,24 @@ public class YetAgainRefactorATable {
      System.out.println(r4C1 + "   " + r4C2 + "  " + r4C3 );
      
      //start of new part
-     Scanner scan = new Scanner();
-     System.out.println("What other row would you like to be displayed?")
+     //decalre scanner, ask quetion get answer
+     Scanner scan = new Scanner(System.in);
+     System.out.println("What other row would you like to be displayed?");
+     int newRow = scan.nextInt();
+     scan.close();
+     //calc other 2 
+     double newRowC2 = Math.pow(newRow, 2); // .pow to sqaure
+     double newRowC3 = Math.pow(newRow, 3); // .pow to cube
+
+     //print out new row + old table
+     //old rows
+     System.out.println("a   a^2   a^3");
+     System.out.println(r1C1 + "   " + r1C2 + "   " + r1C3 );
+     System.out.println(r2C1 + "   " + r2C2 + "   " + r2C3 );
+     System.out.println(r3C1 + "   " + r3C2 + "   " + r3C3 );
+     System.out.println(r4C1 + "   " + r4C2 + "  " + r4C3 );
+     //new row
+     System.out.println(newRow + "   " + newRowC2 + "  " + newRowC3 );
 
     }
     
