@@ -28,13 +28,8 @@ public class CarBuilderOne {
 
         //print statements
         System.out.println("We have found you a car! It is a " + car.year + " " + car.manufacturerName + " " + car.modelName + " with " + car.milesDriven + " miles on it");
-
-
-
-
-        
+     
     }
-    
 }
 
 /*
