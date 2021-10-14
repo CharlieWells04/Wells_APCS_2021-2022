@@ -30,10 +30,5 @@ public class DistanceAcrossEarth {
 
         //print statement
         System.out.println("The distance between the two points is " + distance + " miles");
-    }
-
-
-
-
-    
+    }   
 }
