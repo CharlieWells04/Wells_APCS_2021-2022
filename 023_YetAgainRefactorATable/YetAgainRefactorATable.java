@@ -45,7 +45,5 @@ public class YetAgainRefactorATable {
      System.out.println(r4C1 + "   " + r4C2 + "  " + r4C3 );
      //new row
      System.out.println(newRow + "   " + newRowC2 + "  " + newRowC3 );
-
-    }
-    
+    }    
 }
