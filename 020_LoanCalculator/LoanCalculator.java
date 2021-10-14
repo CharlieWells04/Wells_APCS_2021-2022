@@ -27,3 +27,10 @@ public class LoanCalculator {
     }
     
 }
+/*
+1/1 - Compiles
+0/1 - Content
+-Remember, the interest rate is a percentage...
+1/1 - Formatting
+1/1 - Comments
+*/
