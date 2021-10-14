@@ -19,6 +19,5 @@ public class PerimeterOfACircleCalculator {
         //ze print statements
         System.out.println("The perimeter is " + perimeter);
         System.out.println("The area is " + area);
-    }
-    
+    }    
 }
