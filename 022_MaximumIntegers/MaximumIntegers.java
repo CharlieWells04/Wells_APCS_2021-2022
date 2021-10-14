@@ -16,7 +16,5 @@ public class MaximumIntegers {
         //print statements
         System.out.println(maxOverFlow);
         System.out.println(minOverFlow);
-
     }
-    
 }
