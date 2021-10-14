@@ -4,7 +4,7 @@ public class SubStringPrinter {
         // store sentence in variable
         String sentence = "The quick brown fox jumped over the lazy dog";
 
-        //store substring variables in variables
+        //store substring variables in variables, remember counting starts with 0
         String dog = sentence.substring(41);
         String fox = sentence.substring(16, 19);
         String zy = sentence.substring(38, 40);
