@@ -26,7 +26,7 @@ public class DistanceAcrossEarth {
         set2lon = Math.toRadians(set2lon);
 
         //use haversine formula (look on wikipedia for readable formula)
-        double distance = (2 * radius) * (Math.asin(Math.sqrt((Math.pow(Math.sin((set1lat - set2lat)), 2) / 2 )) + Math.cos(set1lat) + Math.cos(set2lat) * (Math.pow(Math.sin((set1lon - set2lon)), 2) / 2 )));
+        double distance = (2 * radius) * (Math.asin(Math.sqrt((Math.pow(Math.sin((set1lat - set2lat)), 2) / 2 )) + Math.cos(set1lat) * Math.cos(set2lat) * (Math.pow(Math.sin((set1lon - set2lon)), 2) / 2 )));
 
         //print statement
         System.out.println("The distance between the two points is " + distance + " miles");
