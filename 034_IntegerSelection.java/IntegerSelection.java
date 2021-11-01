@@ -34,9 +34,6 @@ public class IntegerSelection {
             {
                 System.out.println(int2);
             }
-
         }
-
     }
-    
 }
