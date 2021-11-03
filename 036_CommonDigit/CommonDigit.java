@@ -27,7 +27,7 @@ public class CommonDigit{
             }
             else//else statement that prints that no common digits
             {
-                System.out.println("There are no common digis between the numbers");
+                System.out.println("There are no common digits between the numbers");
             }
         }
         else//statement if inputs are invalid
