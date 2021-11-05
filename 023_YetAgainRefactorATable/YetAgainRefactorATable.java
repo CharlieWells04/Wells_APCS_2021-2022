@@ -47,3 +47,10 @@ public class YetAgainRefactorATable {
      System.out.println(newRow + "   " + newRowC2 + "  " + newRowC3 );
     }    
 }
+
+/*
+1/1 - Compiles
+1/1 - Content
+1/1 - Formatting
+1/1 - Comments
+*/

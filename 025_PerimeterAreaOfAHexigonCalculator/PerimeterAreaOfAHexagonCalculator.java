@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PerimeterAreaofAHexagonCalculator {
+public class PerimeterAreaOfAHexagonCalculator {
     public static void main(String[] args)
     {
         //declare scanner, ask question, store answer
@@ -18,3 +18,10 @@ public class PerimeterAreaofAHexagonCalculator {
         System.out.println("The area is " + area); 
     }
 }
+
+/*
+1/1 - Compiles
+1/1 - Content
+1/1 - Formatting
+1/1 - Comments
+*/
