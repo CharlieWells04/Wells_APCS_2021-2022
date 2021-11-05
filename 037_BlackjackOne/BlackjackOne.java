@@ -135,13 +135,13 @@ public class BlackjackOne {
         //set up scanner,ask question, and scan in hit or stay
         Scanner scan = new Scanner(System.in);
         System.out.println("Would you like to hit or stay (enter hit OR stay)");
-        String hitOrStay = scan.nextInt();
+        String hitOrStay = scan.nextLine();
         scan.close();
         //if statement for hit or stay
         if (hitOrStay.equals("hit"))
         {
             System.out.println("Your chose to hit");
-            if (card3 == 1)//if statement, pirated from my earlier code
+            if (card3 == 1)//if statement for figuring out what cards aquired, pirated from my earlier code
             {
                 System.out.println("You have an Ace, it is worth 1 point");
             } 
@@ -197,7 +197,8 @@ public class BlackjackOne {
             {
             System.out.println("This should never happen, your code is janky");
             }
-            //code for setting the face cards to 10, also seied from earlier code
+        
+            //code for setting the face cards to 10, also seized from earlier code
             if (card3 > 10) //setting facecards to a value of 10 for cards 1 and 2
             {
                 card3 = 10;
@@ -207,23 +208,23 @@ public class BlackjackOne {
             {
                 System.out.println("Your total is " + (card1 + card2 + card3));
             } 
-            else if (card1 + card2 + card3 == 21)
+            else if (card1 + card2 + card3 == 21)//special statemnt for blcakjack
             {
                 System.out.println("BLACKJACK BABY!");
             }
             else
             {
-                System.out.println("Your total is " + (card1 + card2+ card3) + ", you busted!");
+                System.out.println("Your total is " + (card1 + card2+ card3) + ", you busted!");//bust statement
             }
-        }//this thing isnt working AAAAAAAAAAAAAA  
+        }
+    
         else if (hitOrStay.equals("stay"))//code for if user inputs stay
         {
-            System.out.println("You chose to stay, your total is " + (card1 + card2));
+            System.out.println("You chose to stay, your total is " + (card1 + card2)); //simpy add card 1 and card two and print it
         }
         else
         {
             System.out.println("Invalid Input");
-        }
-        }
+        } 
     } 
 }
