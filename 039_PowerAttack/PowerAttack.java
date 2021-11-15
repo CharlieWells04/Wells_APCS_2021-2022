@@ -11,7 +11,7 @@ public class PowerAttack {
         {
             randoStrength = (int)(Math.random() * 10 + 1);
             finalStrength = randoStrength + baseStrength;
-            if(finalStrength >= 11)
+            if(finalStrength >= 11)//success role
             {
                 damage = (int)(Math.random() * 3 + 4);
                 monsterHealth = monsterHealth - damage;
@@ -22,6 +22,6 @@ public class PowerAttack {
                 System.out.println("The attack failed, the monster has " + monsterHealth + " health left");
             }
         }
-        System.out.println("The monster has been slain!, good luck on further ventures");
+        System.out.println("The monster has been slain!, good luck on further ventures");//final print statement
     }   
 }
