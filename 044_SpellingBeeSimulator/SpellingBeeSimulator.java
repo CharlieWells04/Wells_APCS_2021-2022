@@ -20,7 +20,5 @@ public class SpellingBeeSimulator {
             }
         }
         System.out.println("");//makes console look better
-
-    }
-    
+    } 
 }
