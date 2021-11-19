@@ -28,5 +28,4 @@ public class BasicNestedPractice {
             System.out.println("Invaild input, please try again");
         }
     }
-    
 }
