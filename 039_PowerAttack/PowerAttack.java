@@ -25,3 +25,10 @@ public class PowerAttack {
         System.out.println("The monster has been slain!, good luck on further ventures");//final print statement
     }   
 }
+
+/*
+1/1 - Compiles
+1/1 - Content
+1/1 - Formatting
+1/1 - Comments
+*/
