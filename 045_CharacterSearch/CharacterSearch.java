@@ -5,7 +5,7 @@ public class CharacterSearch {
         int letters = 0;
         int numbers = 0;
         int special_characters = 0;
-        //no more no more no more no more
+        //n
         
 
     }
