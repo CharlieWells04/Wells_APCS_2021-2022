@@ -13,7 +13,7 @@ public class ZodiacCalculator {
     {
         if (year % 12 == 0)
         {
-            System.out.println("You were born in the year of the monkey");//use modulo to find out year, 12 totoal year it rotates onl, repeat 12 times
+            System.out.println("You were born in the year of the monkey");//use modulo to find out year, 12 totoal year it rotates onl, repeat 12
         }
         else if (year % 12 == 1)
         {
