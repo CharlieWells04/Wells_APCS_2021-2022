@@ -1,17 +1,14 @@
 public class Pen {
-    String colorOfInk = "Blue";//decalring class variables
-    String colorOfPen = "Black";
-    boolean hasCap = true;
-    int inkRemaining = 4;
+    //no class variables here anymore
     public static void main(String[] args)
     {
         //empty
     }
-    public void inkRemaining()
+    public void inkRemaining(int inkRemaining)//switched, now has a constructor
     {
         System.out.println("Your pen has " + inkRemaining + " units of ink left");//print out statemnt uding int
     }
-    public void capOff()
+    public void capOff(boolean hasCap)//now has constructor
     {
         //if statement, checks if pen has cap or no
         if (hasCap == true)
@@ -23,7 +20,7 @@ public class Pen {
             System.out.println("Your pen has no cap to take of...");
         }
     }
-    public void clickedOut()
+    public void clickedOut(boolean hasCap)
     {
         //if statement, checks if pen actually has clicky function
         if (hasCap == false)

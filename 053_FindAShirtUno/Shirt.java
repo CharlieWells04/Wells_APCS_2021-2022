@@ -36,7 +36,4 @@ public class Shirt {
             System.out.println("Your shirt is clean");
         }
     }
-
-
-    
 }
