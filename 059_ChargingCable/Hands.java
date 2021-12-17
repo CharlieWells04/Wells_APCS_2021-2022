@@ -7,7 +7,11 @@ public class Hands {
         ChargingCable cable2 = new ChargingCable();
         cable2.cableInfo("Off-brand", 6, "USC-C");//brand, length, type
         ChargingCable cable3 = new ChargingCable();
-        cable1.cableInfo("Apple", 10, "Lightning");//brand, length, type
+        cable3.cableInfo("Apple", 10, "Lightning");//brand, length, type
+        //running cable methods
+        cable1.charging();
+        cable2.charging();
+        cable3.charging();
     }
     
 }
