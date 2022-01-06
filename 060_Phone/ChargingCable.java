@@ -15,12 +15,10 @@ public class ChargingCable {
     }
     public void charging()//method that tests if cords work using if statements
     {
-    //set up ipad into the method
-    Phone p = new Phone();
-    if (connectionType.equals(p.connectionType))
+    if (connectionType.equals("Lightning"))
     {
         phone.currentCharge = 100;
-        System.out.println("You cable plugs in and is charged to " + p.currentCharge + " percent");
+        System.out.println("You cable plugs in and is charged to " + phone.currentCharge + " percent");
         
     }
     else
