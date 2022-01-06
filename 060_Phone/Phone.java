@@ -13,7 +13,7 @@ public class Phone {
         //empty
     }
     //base constructor
-    public void Phone(int currentCharge, String connectionType, int screenSize, String color, int previousOwners, int price)
+    public Phone(int currentCharge, String connectionType, int screenSize, String color, int previousOwners, int price)
     {
         this.currentCharge = currentCharge;
         this.connectionType = connectionType;

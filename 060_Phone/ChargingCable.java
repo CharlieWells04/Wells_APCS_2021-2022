@@ -7,7 +7,7 @@ public class ChargingCable {
     public int length;
     public String connectionType;
     //method that contains data about cables.
-    public void cableInfo(String cbrand, int clength, String cconnectionType)
+    public ChargingCable(String cbrand, int clength, String cconnectionType)
     {
         this.brand = cbrand;
         this.length = clength;
@@ -17,8 +17,8 @@ public class ChargingCable {
     {
     if (connectionType.equals("Lightning"))
     {
-        phone.currentCharge = 100;
-        System.out.println("You cable plugs in and is charged to " + phone.currentCharge + " percent");
+        
+        System.out.println("You cable plugs in and is charged to 100 percent");
         
     }
     else
