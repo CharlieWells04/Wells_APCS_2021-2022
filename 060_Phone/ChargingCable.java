@@ -19,7 +19,7 @@ public class ChargingCable {
     Phone p = new Phone();
     if (connectionType.equals(p.connectionType))
     {
-        ipad.currentCharge = 100;
+        phone.currentCharge = 100;
         System.out.println("You cable plugs in and is charged to " + p.currentCharge + " percent");
         
     }
