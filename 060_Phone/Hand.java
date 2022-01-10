@@ -11,8 +11,6 @@ public class Hand {
         phone.IsItGreen();
         phone.New();
         phone.BrokeCheck();
-        cable.charging();
-        
-        
+        cable.charging(); 
     }  
 }
