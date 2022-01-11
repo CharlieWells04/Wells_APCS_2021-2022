@@ -23,6 +23,10 @@ public class FoodItem {
     {
         return flavor;
     }
+    public String getType()
+    {
+        return typeOfFood;
+    }
     //mutators, change variables, bypass the private part
     public void timePass()
     {
