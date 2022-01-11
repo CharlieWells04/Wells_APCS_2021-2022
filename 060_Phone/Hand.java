@@ -14,3 +14,12 @@ public class Hand {
         cable.charging(); 
     }  
 }
+
+
+/*
+1/1 - Compiles
+0/1 - Content
+-Only one constructor in the phone!
+1/1 - Formatting
+1/1 - Comments
+*/
