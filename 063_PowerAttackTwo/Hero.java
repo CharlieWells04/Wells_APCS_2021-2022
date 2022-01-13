@@ -16,7 +16,7 @@ public class Hero {
         this.critChance = critChance;
         this.strength = strength;
     }
-    //creating getters
+    //creating getters, reutrn stuff
     public String getName()
     {
         return name;
@@ -52,12 +52,21 @@ public class Hero {
     {
         int damageDone = strength;
         int rando = (int)(Math.random() * 100);
-        if (rando >= critChance)
+        if (rando <= critChance)
         {
             damageDone = damageDone * 2;
         }
         return damageDone;
 
+    }
+    //victory and defeat methods
+    public void defeat()
+    {
+        System.out.println("The hero dies, oh no");
+    }
+    public void victory()
+    {
+        System.out.println("The hero wins, cheer!!!");
     }
     //empty main method
     public static void main(String[] args)

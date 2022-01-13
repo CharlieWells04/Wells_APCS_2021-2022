@@ -52,12 +52,20 @@ public class Monster {
     {
         int damageDone = strength;
         int rando = (int)(Math.random() * 100);
-        if (rando >= critChance)
+        if (rando <= critChance)
         {
             damageDone = damageDone * 2;
         }
         return damageDone;
 
+    }
+    public void defeat()
+    {
+        System.out.println("The monster dies, Yay!");
+    }
+    public void victory()
+    {
+        System.out.println("The monster wins, boooo");
     }
 
     //empty main method
