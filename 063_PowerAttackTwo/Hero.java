@@ -4,15 +4,17 @@ public class Hero {
     private int health;
     private int speed;
     private int armor;
+    private int strength;
     private int critChance;
     //creaing constructor
-    public Hero(String name, int health, int speed, int armor, int critChance)
+    public Hero(String name, int health, int speed, int armor, int critChance, int strength)
     {
         this.name = name;
         this.health = health;
         this.speed = speed;
         this.armor = armor;
         this.critChance = critChance;
+        this.strength = strength;
     }
     //creating getters
     public String getName()
@@ -45,14 +47,23 @@ public class Hero {
             health = health - amount;
         }
     }
-    
+    //creating attack method
+    public int attack()
+    {
+        int damageDone = strength;
+        int rando = (int)(Math.random() * 100);
+        if (rando >= critChance)
+        {
+            damageDone = damageDone * 2;
+        }
+        return damageDone;
+
+    }
     //empty main method
     public static void main(String[] args)
     {
         //empty
-    }
-    //creating attack method
-    //im not actually gonna create an attack method, im just gonna have the other person take damage
+    } 
 }
     
 
