@@ -96,8 +96,6 @@ public class PhoneTwo {
     //creating toString Method
     public String toString()
     {
-        return("The phone is a " + color + " that has " + previousOwners + "previous owners");
+        return("The phone is a " + color + " that has has" + previousOwners + " previous owners");
     }
-
-    
 }

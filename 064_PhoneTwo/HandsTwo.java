@@ -6,9 +6,9 @@ public class HandsTwo {
         PhoneTwo p2 = new PhoneTwo(400);
         PhoneTwo p3 = new PhoneTwo(48, "Lightning", 12, "Blue", 0, 250);
         //using to string methods
-        p1.toString();
-        p2.toString();
-        p3.toString();
+        System.out.println(p1.toString());
+        System.out.println(p2.toString());
+        System.out.println(p3.toString());
 
         //using methods
         p1.On();
