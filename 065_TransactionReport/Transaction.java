@@ -9,7 +9,7 @@ public class Transaction {
     private double taxAmountForItem;
     private double itemTotalPrice;
     //making constructor
-    public Transaction(String itemDescription, double itemBasePrice, double itemGivenPrice, double timeOfTransaction, boolean taxableItem, double taxAmountForItem);
+    public Transaction(String itemDescription, double itemBasePrice, double itemGivenPrice, double timeOfTransaction, boolean taxableItem, double taxAmountForItem)
     {
         this.itemDescription = itemDescription;
         this.itemBasePrice = itemBasePrice;
@@ -19,11 +19,11 @@ public class Transaction {
         this.taxAmountForItem = taxAmountForItem;
     }
     //creating setters for all calcualtions later
-    private void setMargin(int amount)
+    public void setMargin(double amount)
     {
         itemMargin = amount;
     }
-    private void setTotalPrice(int amount)
+    public void setTotalPrice(double amount)
     {
         itemTotalPrice = amount;
     }
@@ -36,7 +36,34 @@ public class Transaction {
     {   
         return itemBasePrice;
     }
-
-
+    public double getGivenPrice()
+    {   
+        return itemGivenPrice;
+    }
+    public double getMargin()
+    {   
+        return itemMargin;
+    }
+    public double getTimeOfTransaction()
+    {   
+        return timeOfTransaction;
+    }
+    public boolean getTaxableItem()
+    {   
+        return taxableItem;
+    }
+    public double getTaxAmountForItem()
+    {   
+        return taxAmountForItem;
+    }
+    public double getTotalPrice()
+    {   
+        return itemTotalPrice;
+    }
+    //empty main method
+    public static void main(String[] args)
+    {
+        //empty
+    }
 
 }
