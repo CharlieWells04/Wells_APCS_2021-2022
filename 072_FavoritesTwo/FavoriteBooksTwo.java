@@ -7,7 +7,7 @@ public class FavoriteBooksTwo {
         favs.add("Harry Potter");
         favs.add("Divergent");
         favs.add("Anything but Song Of Solomon");
-
+        //using for each loop
         System.out.println("My favorite books are ");
         for(String books : favs)
         {

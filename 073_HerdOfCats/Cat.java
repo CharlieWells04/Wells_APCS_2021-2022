@@ -4,7 +4,7 @@ public class Cat {
     private String name;
     public Cat(int weight, String name)
     {
-        this.weight = weight;
+        this.weight = weight;//using this keyword
         this.name = name;
     }
     //creating getters
@@ -17,9 +17,14 @@ public class Cat {
         return weight;
     }
     //creating weight setter
-    public void setWeight(x)
+    public void setWeight(int x)
     {
         weight = x;
+    }
+    //empty main method
+    public static void main(String[] args)
+    {
+        //hi
     }
     
 }

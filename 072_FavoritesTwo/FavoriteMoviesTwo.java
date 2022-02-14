@@ -1,13 +1,12 @@
+import java.util.ArrayList;
 public class FavoriteMoviesTwo {
     public static void main(String[] args)
     {
-        //setting up array
-        String[] favs = new String[3];
-        //inputting movies
-        favs[0] = "Shrek";//no fun to do it this way
-        favs[1] = "Shrek 2";
-        favs[2] = "Ice Age";
-        //printing out movies
+        //setting up arraylist
+        ArrayList<String> favs = new ArrayList<>();
+        favs.add("Shrek");
+        favs.add("Ice Age ");
+        favs.add("Shrek 2");
         System.out.println("My favorite movies are :");// for each loops, easier
         for(String movie: favs)
         {
