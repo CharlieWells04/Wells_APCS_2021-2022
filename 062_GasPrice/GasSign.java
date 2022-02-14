@@ -23,3 +23,10 @@ public class GasSign {
     }     
 }
 //the comptuer is adding like .0000000000003 to stuff, idk why, but the numbers are otherwise correct
+
+/*
+1/1 - Compiles
+1/1 - Content
+1/1 - Formatting
+1/1 - Comments
+*/
