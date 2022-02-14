@@ -23,3 +23,12 @@ public class WeeklyHighTemps {
     }
     public static void main(String[] args){}
 }
+
+/*
+1/1 - Compiles
+0/1 - Content
+-This is the second thing where you've done all the work, but are not calling it in main.
+Why? Ask me about this in class and I'll give you back the points one you actually call the methods.
+1/1 - Formatting
+1/1 - Comments
+*/

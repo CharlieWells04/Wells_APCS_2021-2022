@@ -35,3 +35,12 @@ public class Table {
 
     
 }
+
+/*
+1/1 - Compiles
+0/1 - Content
+-Ahh, the issue here is that it's not the "13 of Spades", it's the King of Spades. You should
+refactor to actually show face values, and make the values equal to a String.
+1/1 - Formatting
+1/1 - Comments
+*/

@@ -6,3 +6,10 @@ public class FavoriteShows {
         System.out.println("My favorite shows are " + favs[0] + ", " + favs[1] + ", and " + favs[2] + ".");//copy [asted print statement from earlier
     } 
 }
+
+/*
+1/1 - Compiles
+1/1 - Content
+1/1 - Formatting
+1/1 - Comments
+*/

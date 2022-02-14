@@ -27,3 +27,10 @@ public class PantryShelf {
         System.out.println("I now have " + f2.getNumber() + " " + f2.getType());//prints final number of food    
      }
 }
+
+/*
+1/1 - Compiles
+1/1 - Content
+1/1 - Formatting
+1/1 - Comments
+*/
