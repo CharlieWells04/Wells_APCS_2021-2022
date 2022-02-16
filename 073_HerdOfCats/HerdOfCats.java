@@ -27,7 +27,6 @@ public class HerdOfCats {
             //changing the weights
             catsList.get(i).setWeight(catsList.get(i).getWeight() + 1);
             //pritning
-            
             System.out.println("He now weighs " + catsList.get(i).getWeight() + " pounds");
         }
     }
