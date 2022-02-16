@@ -25,9 +25,10 @@ public class HerdOfCats {
             System.out.println(" pounds");
             System.out.println("I am now feeding him 1 pound of fish");
             //changing the weights
+            catsList.get(i).setWeight(catsList.get(i).getWeight() + 1);
+            //pritning
             
-
+            System.out.println("He now weighs " + catsList.get(i).getWeight() + " pounds");
         }
     }
-    
 }
