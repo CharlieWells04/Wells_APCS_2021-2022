@@ -13,7 +13,7 @@ public class Dice {
     public int Roll()
     {
         int temp;
-        temp = (int)(Math.random() * sides);
+        temp = (int)(Math.random() * sides +1);
         value = temp;
         return temp;
     }

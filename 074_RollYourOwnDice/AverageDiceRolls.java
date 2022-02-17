@@ -4,7 +4,8 @@ public class AverageDiceRolls {
     ArrayList<Integer> rolls = new ArrayList<>();//class arraylist
     public static void main(String[] args)
     {
-
+        AverageDiceRolls adr = new AverageDiceRolls();
+        adr.Start();
     }
     public void Start()
     {
@@ -17,6 +18,8 @@ public class AverageDiceRolls {
         int temp = dice.Roll();
         System.out.println(temp);
         rolls.add(temp);//adds to arraylist
+        //running scan once so no glitch
+    
         while(sides > -1)//purposeful infinite while loop
         {
             System.out.println("Would you like to roll again (respond with \"yes\" or \"no\"");
@@ -38,6 +41,13 @@ public class AverageDiceRolls {
                 System.out.println("Invalid Input, try again");
             }
         }
-        //making the 
+        //making the averaging function
+        int avg = 0;
+        for (int i = 0; i < rolls.size(); i++)
+        {
+            avg = avg + rolls.get(i);
+        }
+        avg = avg / rolls.size();
+        System.out.println("The average of all the dice rolls " + avg);
     }
 }
