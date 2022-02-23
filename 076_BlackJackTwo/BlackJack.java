@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
+
+import javax.swing.plaf.TreeUI;//dont know what this is 
 public class BlackJack
 {
     //making class arrays
@@ -71,12 +73,13 @@ public class BlackJack
         for(int i = 0; i <= 1; i++)
         {
         int rando = (int)(Math.random() * fullDeck.size() + 1);
-        Card tempCard = new Card(fullDeck.get(rando).getSuit(), fullDeck.get(rando).getValue());
-        tempCard.printCard();
+        Card tempCard = new Card(fullDeck.get(rando).getSuit(), fullDeck.get(rando).getValue());//creates a card to printoff
+        
         dealerDeck.add(fullDeck.get(rando));
         //if statement so only prints off 1st card
         if (i == 0)
         {
+            System.out.print("The dealers face up card is a ");//prints off dealers face up card
             tempCard.printCard();
         }
         fullDeck.remove(rando);
@@ -118,9 +121,8 @@ public class BlackJack
         }
     }
     //making the method that runs the hand
-    public void runHand(ArrayList<Card> fullDeck)
+    public void runHand()
     {
-        this.fullDeck = fullDeck;
         playerInitialDeal();//deals initial hands
         dealerInitialDeal();
         if (blackjackCheck(playerDeck) == true)
@@ -129,31 +131,62 @@ public class BlackJack
         }
         else
         {
-            System.out.println(HandCounter(playerDeck) + "is the value of your cards, would you like to hit or stay (reply with H or S)");
+            System.out.println(HandCounter(playerDeck) + " is the value of your cards, would you like to hit or stay (reply with H or S)");
             Scanner scan = new Scanner(System.in);
-            String HorS = scan.nextLine();
-            while(brokeCheck(playerDeck) == false)
-            {
+            
             //making if statemnt for hit or stay
             //while loop for mistype purposes
-            int i = 0;
-            while(i < 1)
+            while(true)
             {
+                String HorS = scan.nextLine();
                 if (HorS.equals("H"))
                 {
                     Hit(playerDeck);
-                    i++;
+                
+                    //if statement, chcks if player broke or not
+                    if (brokeCheck(playerDeck) == true)
+                    {
+                        System.out.println("You broke");
+                        break;
+                    }
                 }
                 else if(HorS.equals("S"))
                 {
                     System.out.println("You chose to stay");
-                    i++;
+                    break;
                 }
                 else
                 {
                     System.out.println("Invalid input, try again");
                 }
             }
+            //making the dealer functionality
+            while(true)
+            {
+                int dealerHandCount = HandCounter(dealerDeck);
+                if (dealerHandCount > 21)
+                {
+                    System.out.println("The dealer busted, you Win!");
+                    break;
+                }
+                else if (dealerHandCount >= 17)
+                {
+                    System.out.println("The dealer stays and has " + dealerHandCount);
+                    if(dealerHandCount >= HandCounter(playerDeck))
+                    {
+                        System.out.println("The dealer wins");
+                    }
+                    else
+                    {
+                        System.out.println("You Win!");
+                    }
+                break;
+                }
+                else
+                {
+                    Hit(dealerDeck);
+                    System.out.println("The dealer hits");
+                }
             }
         }
     }
