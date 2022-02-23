@@ -19,8 +19,8 @@ public class AverageDiceRolls {
         System.out.println(temp);
         rolls.add(temp);//adds to arraylist
         //running scan once so no glitch
-    
-        while(sides > -1)//purposeful infinite while loop
+        scan.nextLine();
+        while(true)//purposeful infinite while loop
         {
             System.out.println("Would you like to roll again (respond with \"yes\" or \"no\"");
             String yorn = scan.nextLine();
@@ -42,7 +42,7 @@ public class AverageDiceRolls {
             }
         }
         //making the averaging function
-        int avg = 0;
+        double avg = 0;
         for (int i = 0; i < rolls.size(); i++)
         {
             avg = avg + rolls.get(i);
