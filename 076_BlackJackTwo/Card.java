@@ -44,6 +44,4 @@ public class Card {
     //empty main method
     public static void main(String[] args){}
 
-    //card prinbter method
-
 }

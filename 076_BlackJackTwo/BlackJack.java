@@ -41,13 +41,15 @@ public class BlackJack
             while(numOfAces > 0)
             {
                 //if statement, used to check ace values and choose if aces are 1 or 11
-                if (counter + (11 * numOfAces) <= (21 - (numOfAces - 1)))//this logic is tricky, you have to consider if multiple aces are involved
+                if (counter + (11 * numOfAces) <= (21 - (numOfAces - (1 * numOfAces))))//this logic is tricky, you have to consider if multiple aces are involved
                 {
                     counter = counter + 11;
+                    numOfAces--;
                 }
                 else
                 {
                     counter = counter + 1;
+                    numOfAces--;
                 }
             }
             //returning counter
@@ -59,7 +61,7 @@ public class BlackJack
         //for loop repeats twice
         for(int i = 0; i <= 1; i++)
         {
-        int rando = (int)(Math.random() * fullDeck.size() + 1);
+        int rando = (int)(Math.random() * fullDeck.size());
         Card tempCard = new Card(fullDeck.get(rando).getSuit(), fullDeck.get(rando).getValue());
         playerDeck.add(fullDeck.get(rando));
         tempCard.printCard();
@@ -72,7 +74,7 @@ public class BlackJack
         //for loop repeats twice
         for(int i = 0; i <= 1; i++)
         {
-        int rando = (int)(Math.random() * fullDeck.size() + 1);
+        int rando = (int)(Math.random() * fullDeck.size());
         Card tempCard = new Card(fullDeck.get(rando).getSuit(), fullDeck.get(rando).getValue());//creates a card to printoff
         
         dealerDeck.add(fullDeck.get(rando));
@@ -88,9 +90,9 @@ public class BlackJack
     //making the hit method
     public void Hit(ArrayList<Card> cardDeckToHit)
     {
-        int rando = (int)(Math.random() * fullDeck.size() + 1);//copied this logic from my initial deal code
+        int rando = (int)(Math.random() * fullDeck.size());//copied this logic from my initial deal code
         Card tempCard = new Card(fullDeck.get(rando).getSuit(), fullDeck.get(rando).getValue());
-
+        tempCard.printCard();
         cardDeckToHit.add(fullDeck.get(rando));
         fullDeck.remove(rando);
     }
@@ -121,23 +123,25 @@ public class BlackJack
         }
     }
     //making the method that runs the hand
-    public void runHand()
+    public boolean runHand()
     {
         playerInitialDeal();//deals initial hands
         dealerInitialDeal();
         if (blackjackCheck(playerDeck) == true)
         {
             System.out.println("You win! Yay");
+            return false;
         }
         else
         {
-            System.out.println(HandCounter(playerDeck) + " is the value of your cards, would you like to hit or stay (reply with H or S)");
+            
             Scanner scan = new Scanner(System.in);
             
             //making if statemnt for hit or stay
             //while loop for mistype purposes
             while(true)
             {
+                System.out.println(HandCounter(playerDeck) + " is the value of your cards, would you like to hit or stay (reply with H or S)");
                 String HorS = scan.nextLine();
                 if (HorS.equals("H"))
                 {
@@ -146,8 +150,8 @@ public class BlackJack
                     //if statement, chcks if player broke or not
                     if (brokeCheck(playerDeck) == true)
                     {
-                        System.out.println("You broke");
-                        break;
+                        System.out.println("You broke, you lose");
+                        return false;
                     }
                 }
                 else if(HorS.equals("S"))
@@ -160,6 +164,9 @@ public class BlackJack
                     System.out.println("Invalid input, try again");
                 }
             }
+            //closing scanner
+            scan.close();
+            System.out.println("The dealers value is " + HandCounter(dealerDeck));
             //making the dealer functionality
             while(true)
             {
@@ -184,11 +191,13 @@ public class BlackJack
                 }
                 else
                 {
+                    System.out.println("The dealer hits");//hits for the dealer
                     Hit(dealerDeck);
-                    System.out.println("The dealer hits");
+                    
                 }
             }
         }
+        return true;
     }
     
 }
