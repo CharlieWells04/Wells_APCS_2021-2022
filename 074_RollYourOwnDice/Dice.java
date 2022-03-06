@@ -24,3 +24,13 @@ public class Dice {
     }
 
 }
+
+/*
+1/1 - Compiles
+1/1 - Content
+
+I'd have liked the average as it went along, but this is fine.
+
+1/1 - Formatting
+1/1 - Comments
+*/

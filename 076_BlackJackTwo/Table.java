@@ -34,3 +34,11 @@ public class Table
         }
     }
 }
+
+/*
+1/1 - Compiles
+1/1 - Content
+-So close, but if I hit enter instead of yes or no once one game completes, it'll crash. Very good though.
+1/1 - Formatting
+1/1 - Comments
+*/
