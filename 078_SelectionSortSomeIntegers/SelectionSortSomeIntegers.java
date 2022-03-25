@@ -12,21 +12,19 @@ public class SelectionSortSomeIntegers {
         {
             nums.add((int)(Math.random() * 1000 + 1));
         }
-        //doing the slection sort thing
-        for (int i = 0; i < nums.size() - 1; i++) {
-            int pos = i;
-            // find position of smallest num between (i + 1)th element and last element
-            for (int j = i + 1; j <= nums.size(); j++) {
-                if (nums.get(i) < nums.get(pos))
+        for (int i = 0; i < numOfInts; i++) {//starts looping thru all the indedes starting at 0
+            int pos = i;//sets pos
+            for (int j = i; j < nums.size(); j++) {//for each index, loops thru until it finds one smaller
+                if (nums.get(j) < nums.get(pos))
                 {
-                pos = j;
+                    pos = j;//sets pos to j
                 }
-                // Swap min (smallest num) to current position on array
-                int min = nums.get(pos);
-                nums.get(pos) = nums.get(i);
-                nums.get(i) = min;
-            }    
-        System.out.println(nums);     
+            }
+            int min = nums.get(pos);//sets the min to the point where it is smaller, so that it sorts
+            nums.set(pos, nums.get(i));
+            nums.set(i, min);
+        }
+        System.out.println(nums);//prints out
     }
 }
-}
+
