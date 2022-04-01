@@ -6,5 +6,6 @@ public class ScrabbleTile {
         this.letter = letter;
         this.points = points;
     }
+    public static void main(String[] args){}
     
 }
