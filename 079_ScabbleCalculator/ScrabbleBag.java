@@ -1,4 +1,5 @@
 public class ScrabbleBag {
+
     ScrabbleTile a1 = new ScrabbleTile("a", 1);
     ScrabbleTile a2 = new ScrabbleTile("a", 1);
     ScrabbleTile a3 = new ScrabbleTile("a", 1);
@@ -60,6 +61,7 @@ public class ScrabbleBag {
     ScrabbleTile n6 = new ScrabbleTile("n", 1);
     ScrabbleTile o1 = new ScrabbleTile("o", 1);
     ScrabbleTile o2 = new ScrabbleTile("o", 1);
+    ScrabbleTile o3 = new ScrabbleTile("o", 1);
     ScrabbleTile o4 = new ScrabbleTile("o", 1);
     ScrabbleTile o5 = new ScrabbleTile("o", 1);
     ScrabbleTile o6 = new ScrabbleTile("o", 1);
@@ -97,10 +99,13 @@ public class ScrabbleBag {
     ScrabbleTile y2 = new ScrabbleTile("y", 4);
     ScrabbleTile z1 = new ScrabbleTile("z", 10);
     //making the array to return
-    private ScrabbleTile[] theBag = {a1, a2, a3, a4, a5, a6, a7, a8, a9, b1, b2, c1, c2, d1, d2, d3, d4, e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, e12, f1, f2, g1, g2, g3, h1, h2, i1, i2, i3, i4, i5, i6, i7, i8, i9, j1, k1, l1, l2, l3, l4, m1, m2, n1, n2, n3, n4, n5, n6, o1 o2, o3, o4, o5, o6, o7, o8, p1, p2, q1, r1, r2, r3, r4, r5, r6, s1, s2, s3, s4, t1, t2, t3, t4, t5, t6, u1, u2, u3, u4, v1, v2, w1, w2, x1, y1, y2, z1}
-    //public ScrabbleTile[] getBag()
+    private ScrabbleTile[] theBag = {a1, a2, a3, a4, a5, a6, a7, a8, a9, b1, b2, c1, c2, d1, d2, d3, d4, e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, e12, f1, f2, g1, g2, g3, h1, h2, i1, i2, i3, i4, i5, i6, i7, i8, i9, j1, k1, l1, l2, l3, l4, m1, m2, n1, n2, n3, n4, n5, n6, o1, o2, o3, o4, o5, o6, o7, o8, p1, p2, q1, r1, r2, r3, r4, r5, r6, s1, s2, s3, s4, t1, t2, t3, t4, t5, t6, u1, u2, u3, u4, v1, v2, w1, w2, x1, y1, y2, z1};
+    //making the return method
+    public ScrabbleTile[] getBag()
     {
         return theBag;//returning the bag
     }
-    public static void main(String[] args){}
+
+    public static void main(String[] args){}//empty main method
+
 }

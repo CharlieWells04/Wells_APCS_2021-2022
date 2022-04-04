@@ -7,5 +7,14 @@ public class ScrabbleTile {
         this.points = points;
     }
     public static void main(String[] args){}
+    //making getters for letters and points
+    public int getPoints()
+    {
+        return points;
+    }
+    public String getLetter()
+    {
+        return letter;
+    }
     
 }
