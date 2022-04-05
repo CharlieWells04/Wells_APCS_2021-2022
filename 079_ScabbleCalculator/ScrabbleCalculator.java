@@ -1,6 +1,7 @@
 import java.util.*;
 public class ScrabbleCalculator {
     public ArrayList<ScrabbleTile> userWordTiles = new ArrayList<>();
+    int totalPoints = 0;
     public void printUserTiles()
     {
         //prints out the users letter
@@ -38,6 +39,7 @@ public class ScrabbleCalculator {
             }
         }
         System.out.println("The word works");
+        PointChecker(word);//runs method that checks and prints points for word, ISSSUE HAPPENIG HERE IS THAT GETLETTER IS AN OBJECT METHOD BUT WOD IS A STRING ARRAY
         //second set of for loops, actually removes the letters from the users arraylist, much simpler due to knowing that word workss
         for(int i = 0; i < word.length; i++)
         {
@@ -61,6 +63,24 @@ public class ScrabbleCalculator {
             userWordTiles.add(bagToUse[rando]);
         }
     }
+    public void PointChecker(String[] userWord)
+    {
+        int tempPointCounter = 0;
+        System.out.println("Your Word is ");
+        for(int i = 0; i < userWord.length; i++)
+        {
+            System.out.print(userWord[i].getLetter());//prints off word
+        }
+        System.out.println("");
+        for(int i = 0; i < userWord.length; i++)//runs thru and counts pounts
+        {
+            System.out.println(userWord[i].getLetter() + " is worth " + (userWord[i].getLetter()) + " points");
+            tempPointCounter += (userWord[i].getLetter());
+        }
+        totalPoints += tempPointCounter;
+        System.out.println("You now have " + totalPoints + " points");
+
+    }           
 
     public static void main(String[] args){}
     

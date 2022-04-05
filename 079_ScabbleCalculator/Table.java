@@ -28,9 +28,6 @@ public class Table {
             {
                 userWord[i] = ("" + userWordButChar[i]);//this is a kind of scuffed workaraound, but it turns the char into a string
             }
-            if(sc.CheckWord(userWord) == true)
-            {
-                //all is left to do is to make the methgod that calculates and pritns points
-            }
+            
     }
 }
