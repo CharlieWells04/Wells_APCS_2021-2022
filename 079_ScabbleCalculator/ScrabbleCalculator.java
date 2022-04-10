@@ -18,6 +18,7 @@ public class ScrabbleCalculator {
         //first iteration, loops thru the word 
         ArrayList<ScrabbleTile> temp = new ArrayList<>();
         temp = userWordTiles;//temp is created to check and remove without actually removing them
+        ArrayList<ScrabbleTile> tempButForPointChecker = new ArrayList<>();//this stores the objects so that you can run thru point checker
         boolean failedLetter = true;//used later to break loop if letter fails
         for(int i = 0; i < word.length; i++)
         {
@@ -39,7 +40,8 @@ public class ScrabbleCalculator {
             }
         }
         System.out.println("The word works");
-        PointChecker(word);//runs method that checks and prints points for word, ISSSUE HAPPENIG HERE IS THAT GETLETTER IS AN OBJECT METHOD BUT WOD IS A STRING ARRAY
+        PointChecker(tempButForPointChecker);//runs method that checks and prints points for word
+        
         //second set of for loops, actually removes the letters from the users arraylist, much simpler due to knowing that word workss
         for(int i = 0; i < word.length; i++)
         {
@@ -48,11 +50,13 @@ public class ScrabbleCalculator {
             {
                 if(word[i].equals(userWordTiles.get(j).getLetter()))
                 {
+                    tempButForPointChecker.add(userWordTiles.get(j));
                     userWordTiles.remove(j);
                     break;//breaks the loop because succesful letter has been found
                 }
             }
         }
+        
         return true;
     }
     public void fillUserTiles(ScrabbleTile[] bagToUse)//fills up users tiles, back up to 7
@@ -63,19 +67,19 @@ public class ScrabbleCalculator {
             userWordTiles.add(bagToUse[rando]);
         }
     }
-    public void PointChecker(String[] userWord)
+    public void PointChecker(ArrayList<ScrabbleTile> userWord)
     {
         int tempPointCounter = 0;
         System.out.println("Your Word is ");
-        for(int i = 0; i < userWord.length; i++)
+        for(int i = 0; i < userWord.size(); i++)
         {
-            System.out.print(userWord[i].getLetter());//prints off word
+            System.out.print(userWord.get(i).getLetter());//prints off word
         }
         System.out.println("");
-        for(int i = 0; i < userWord.length; i++)//runs thru and counts pounts
+        for(int i = 0; i < userWord.size(); i++)//runs thru and counts pounts
         {
-            System.out.println(userWord[i].getLetter() + " is worth " + (userWord[i].getLetter()) + " points");
-            tempPointCounter += (userWord[i].getLetter());
+            System.out.println(userWord.get(i).getLetter() + " is worth " + (userWord.get(i).getLetter()) + " points");
+            tempPointCounter += (userWord.get(i).getPoints());
         }
         totalPoints += tempPointCounter;
         System.out.println("You now have " + totalPoints + " points");
