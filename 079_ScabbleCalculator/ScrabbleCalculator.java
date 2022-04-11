@@ -54,6 +54,11 @@ public class ScrabbleCalculator {
                 }
             }
         }
+        //temporary, pritns for testing purposes
+        for(int i = 0; i < tempButForPointChecker.size(); i++)
+        {
+            System.out.println(tempButForPointChecker.get(i).getLetter());
+        }
         PointChecker(tempButForPointChecker);//runs method that checks and prints points for word
         
         return true;
