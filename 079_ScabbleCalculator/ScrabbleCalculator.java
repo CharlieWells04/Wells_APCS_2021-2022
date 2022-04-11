@@ -40,8 +40,6 @@ public class ScrabbleCalculator {
             }
         }
         System.out.println("The word works");
-        PointChecker(tempButForPointChecker);//runs method that checks and prints points for word
-        
         //second set of for loops, actually removes the letters from the users arraylist, much simpler due to knowing that word workss
         for(int i = 0; i < word.length; i++)
         {
@@ -56,6 +54,7 @@ public class ScrabbleCalculator {
                 }
             }
         }
+        PointChecker(tempButForPointChecker);//runs method that checks and prints points for word
         
         return true;
     }

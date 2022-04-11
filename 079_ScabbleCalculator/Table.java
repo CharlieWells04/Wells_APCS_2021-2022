@@ -28,6 +28,6 @@ public class Table {
             {
                 userWord[i] = ("" + userWordButChar[i]);//this is a kind of scuffed workaraound, but it turns the char into a string
             }
-            
+            sc.CheckWord(userWord);
     }
 }
