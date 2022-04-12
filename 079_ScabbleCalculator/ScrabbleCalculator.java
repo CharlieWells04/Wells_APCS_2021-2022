@@ -28,6 +28,7 @@ public class ScrabbleCalculator {
                 failedLetter = true;//sets to true for each lettr
                 if(word[i].equals(temp.get(j).getLetter()))
                 {
+                    tempButForPointChecker.add(temp.get(j));
                     temp.remove(j);
                     failedLetter = false;
                     break;//breaks the loop because succesful letter has been found
@@ -41,21 +42,7 @@ public class ScrabbleCalculator {
         }
         System.out.println("The word works");
         //second set of for loops, actually removes the letters from the users arraylist, much simpler due to knowing that word workss
-        for(int i = 0; i < word.length; i++)
-        {
-            //second iteration, loops through the userword tiles, checks if they match
-            for(int j = 0; j < userWordTiles.size(); j++)
-            {
-                if(word[i].equals(userWordTiles.get(j).getLetter()))
-                {
-                    tempButForPointChecker.add(userWordTiles.get(j));
-                    userWordTiles.remove(j);
-                    break;//breaks the loop because succesful letter has been found
-                }
-            }
-        }
         PointChecker(tempButForPointChecker);//runs method that checks and prints points for word
-        
         return true;
     }
     public void fillUserTiles(ScrabbleTile[] bagToUse)//fills up users tiles, back up to 7
@@ -77,7 +64,7 @@ public class ScrabbleCalculator {
         System.out.println("");
         for(int i = 0; i < userWord.size(); i++)//runs thru and counts pounts
         {
-            System.out.println(userWord.get(i).getLetter() + " is worth " + (userWord.get(i).getLetter()) + " points");
+            System.out.println(userWord.get(i).getLetter() + " is worth " + (userWord.get(i).getPoints()) + " points");
             tempPointCounter += (userWord.get(i).getPoints());
         }
         totalPoints += tempPointCounter;
