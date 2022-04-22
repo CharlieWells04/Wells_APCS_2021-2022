@@ -9,7 +9,7 @@ public class WeatherComparison {
     }
     public int[][] getTemps()
     {
-        int[][] temps = {
+        int[][] temps = {//making the 2d array
             {0, 01, 02, 03, 04, 05, 06 ,07},
             {2015, 63, 54, 35, 43, 44, 40, 40},
             {2016, 37, 32, 44, 34, 34, 38, 38},
@@ -48,7 +48,7 @@ public class WeatherComparison {
         System.out.println("Average temps per day");
         int counter = 0;
         for (int i = 1; i < arr.length; i++) { //outer for loop, runs the inner for loop
-            System.out.print(arr[0][i] + ": ");//print out the date 
+            System.out.print(arr[0][i] + " April: ");//print out the date 
             for (int j = 0; j < arr[i].length - 1; j++) { //inner for loop
                counter += arr[j][i];
             }
